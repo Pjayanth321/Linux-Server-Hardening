@@ -34,76 +34,82 @@ The script applies real-world best practices used in system hardening and logs a
    ```bash
    git clone https://github.com/yourusername/linux-server-hardening.git
    cd linux-server-hardening
-Make the script executable:
+   ```
 
-bash
-Copy
-Edit
-chmod +x harden.sh
-Run the script with sudo:
+2. Make the script executable:
+   ```bash
+   chmod +x harden.sh
+   ```
 
-bash
-Copy
-Edit
-sudo ./harden.sh
-Review the log file:
+3. Run the script with sudo:
+   ```bash
+   sudo ./harden.sh
+   ```
 
-bash
-Copy
-Edit
-cat harden.log
-📸 Screenshots
-🔹 1. Script Execution (Automation Running)
+4. Review the log file:
+   ```bash
+   cat harden.log
+   ```
+
+---
+
+## 📸 Screenshots
+
+🔹 **1. Script Execution (Automation Running)**  
 <img src="screenshots/script_run.png" width="700"/>
 
-🔹 2. SSH Configuration Hardened
+🔹 **2. SSH Configuration Hardened**  
 <img src="screenshots/sshd_config.png" width="700"/>
 
-🔹 3. UFW Firewall Enabled and Active
+🔹 **3. UFW Firewall Enabled and Active**  
 <img src="screenshots/ufw_status.png" width="700"/>
 
-🔹 4. Fail2Ban Service Active for SSH Brute-Force Protection
+🔹 **4. Fail2Ban Service Active for SSH Brute-Force Protection**  
 <img src="screenshots/fail2banstatus.png" width="700"/>
 
-More screenshots are available in the /screenshots/ folder.
+> More screenshots are available in the [`/screenshots/`](screenshots/) folder.
 
-📂 Project Structure
-File / Folder	Description
-README.md	Project overview and documentation
-harden.sh	Main automation script
-screenshots/	Screenshots of script output and results
+---
 
-🔐 Security Goals
-Apply baseline hardening from CIS and OWASP recommendations
+## 📂 Project Structure
 
-Lock down remote access
+| File / Folder     | Description |
+|------------------|-------------|
+| `README.md`       | Project overview and documentation |
+| `harden.sh`       | Main automation script |
+| `screenshots/`    | Screenshots of script output and results |
 
-Minimize attack surface
+---
 
-Log all critical actions for review
+## 🔐 Security Goals
 
-📌 Notes
-Tested on fresh Ubuntu 22.04 VM
+- Apply baseline hardening from CIS and OWASP recommendations  
+- Lock down remote access  
+- Minimize attack surface  
+- Log all critical actions for review  
 
-Run the script only once per system unless otherwise modified
+---
 
-Ideal for learning Linux hardening automation
+## 📌 Notes
 
-📈 Future Improvements
-Add support for CentOS/Debian systems
+- Tested on fresh Ubuntu 22.04 VM  
+- Run the script only once per system unless otherwise modified  
+- Ideal for learning Linux hardening automation  
 
-Schedule cron job for periodic log audits
+---
 
-Integrate email alerts for critical events
+## 📈 Future Improvements
 
-Add rollback/restore support
+- Add support for CentOS/Debian systems  
+- Schedule cron job for periodic log audits  
+- Integrate email alerts for critical events  
+- Add rollback/restore support  
 
-🙏 Credits
-CIS Benchmarks
+---
 
-OWASP Linux Hardening
+## 🙏 Credits
 
-Ubuntu Community Wiki
-
-InfoSec Forums & Hardening Guides
-
+- CIS Benchmarks  
+- OWASP Linux Hardening  
+- Ubuntu Community Wiki  
+- InfoSec Forums & Hardening Guides  
