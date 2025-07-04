@@ -32,7 +32,7 @@ The script applies real-world best practices used in system hardening and logs a
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Pjayanth321/linux-server-hardening.git
+   git clone https://github.com/yourusername/linux-server-hardening.git
    cd linux-server-hardening
 Make the script executable:
 
@@ -48,21 +48,24 @@ Edit
 sudo ./harden.sh
 Review the log file:
 
-matlab
+bash
 Copy
 Edit
 cat harden.log
 📸 Screenshots
-🔹 1. Script Execution Preview
+🔹 1. Script Execution (Automation Running)
 <img src="screenshots/script_run.png" width="700"/>
 
-🔹 2. SSH Root Login Disabled
-<img src="screenshots/ssh_config.png" width="700"/>
+🔹 2. SSH Configuration Hardened
+<img src="screenshots/sshd_config.png" width="700"/>
 
-🔹 3. UFW Firewall Enabled
+🔹 3. UFW Firewall Enabled and Active
 <img src="screenshots/ufw_status.png" width="700"/>
 
-More screenshots available in the /screenshots/ folder.
+🔹 4. Fail2Ban Service Active for SSH Brute-Force Protection
+<img src="screenshots/fail2banstatus.png" width="700"/>
+
+More screenshots are available in the /screenshots/ folder.
 
 📂 Project Structure
 File / Folder	Description
