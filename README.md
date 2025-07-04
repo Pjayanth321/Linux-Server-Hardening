@@ -1,100 +1,106 @@
-# 🔐 Linux Server Hardening + Automation
+# 🛡️ Linux Server Hardening + Automation
 
-This project demonstrates how to **automate basic Linux server hardening** using a Bash script (`harden.sh`). It's designed for beginners who want to learn how to secure a Linux system and showcase automation skills in their portfolio.
+This project automates the hardening of a Linux server using a Bash script. It is ideal for beginners, SOC aspirants, and students who want to secure a Linux environment quickly and effectively using simple automation.
 
----
-
-## 🚀 Project Overview
-
-The goal is to **secure a Linux Ubuntu server** by automating:
-
-- System updates & upgrades
-- Creating a secure non-root admin user
-- Hardening the SSH service
-- Enabling and configuring a firewall (UFW)
-- Protecting SSH against brute-force attacks with Fail2Ban
-- Enabling automatic security updates
-
-This project is **ideal for freshers** aiming to demonstrate basic DevSecOps awareness and scripting ability.
+The script applies real-world best practices used in system hardening and logs all actions for transparency.
 
 ---
 
-## 🛠️ Features Implemented
+## 📁 Project Overview
 
-| Feature                  | Description                                                                 |
-|--------------------------|-----------------------------------------------------------------------------|
-| 🔧 System Update         | Automatically updates & upgrades packages                                   |
-| 👤 User Management       | Creates a `secureadmin` user with sudo privileges                           |
-| 🔐 SSH Hardening         | Changes default port, disables root login, enforces key authentication       |
-| 🔥 UFW Firewall          | Denies all incoming traffic except SSH (port 2200)                          |
-| 🛡️ Fail2Ban Protection   | Blocks repeated failed SSH login attempts                                    |
-| 🔄 Auto Security Updates | Enables unattended upgrades for security patches                           |
+- **Operating System**: Ubuntu Server 22.04 LTS  
+- **Script Language**: Bash  
+- **Objective**: Automate the security hardening of a fresh Linux server  
+- **Key Features**: SSH lockdown, firewall setup, user restrictions, file permissions, and audit logging
 
 ---
 
-## 📂 Folder Structure
+## ⚙️ Features Implemented
 
-Linux-Server-Hardening-Project/
-│
-├── harden.sh # Bash script that performs all hardening steps
-├── README.md # Project documentation (this file)
-└── screenshots/ # Folder containing output and verification screenshots
-├── sshd_config.png
-├── ufw_status.png
-├── fail2ban_status.png
-└── script_run.png
-
----
-
-## 📸 Screenshots
-
-| Screenshot               | Description                                 |
-|--------------------------|---------------------------------------------|
-| `sshd_config.png`        | Hardened SSH config file                    |
-| `ufw_status.png`         | UFW firewall status showing port 2200 open  |
-| `fail2ban_status.png`    | Fail2Ban jail showing active monitoring     |
-| `script_run.png`         | Output of `harden.sh` automation script     |
-
-> 💡 Screenshots are stored in the `screenshots/` folder.
+| Feature             | Description |
+|---------------------|-------------|
+| 🔐 SSH Hardening     | Disable root login, change SSH port, enforce key-only authentication |
+| 🔥 Firewall (UFW)    | Allow only necessary ports, deny all others |
+| 👥 User Management   | Remove unused users, enforce limited privilege |
+| 🧾 Audit Logging     | Enable auditd for logging user activities |
+| 🔒 File Permissions  | Secure sensitive files like `/etc/shadow` and `/etc/passwd` |
+| 🧹 Cleanup           | Remove unnecessary packages and services |
 
 ---
 
-## 🧪 Usage
+## 🛠️ How to Use
 
-1. **Make the script executable**:
+1. Clone the repository:
    ```bash
-   chmod +x harden.sh
-Run with root privileges:
+   git clone https://github.com/Pjayanth321/linux-server-hardening.git
+   cd linux-server-hardening
+Make the script executable:
+
+bash
+Copy
+Edit
+chmod +x harden.sh
+Run the script with sudo:
 
 bash
 Copy
 Edit
 sudo ./harden.sh
-Login with your new user:
+Review the log file:
 
-SSH Port: 2200
+matlab
+Copy
+Edit
+cat harden.log
+📸 Screenshots
+🔹 1. Script Execution Preview
+<img src="screenshots/script_run.png" width="700"/>
 
-Username: secureadmin
+🔹 2. SSH Root Login Disabled
+<img src="screenshots/ssh_config.png" width="700"/>
 
-Authentication: SSH key only
+🔹 3. UFW Firewall Enabled
+<img src="screenshots/ufw_status.png" width="700"/>
 
-✅ Requirements
-Ubuntu 22.04 LTS (or compatible)
+More screenshots available in the /screenshots/ folder.
 
-SSH key pair configured
+📂 Project Structure
+File / Folder	Description
+README.md	Project overview and documentation
+harden.sh	Main automation script
+screenshots/	Screenshots of script output and results
 
-Internet access (for package updates)
+🔐 Security Goals
+Apply baseline hardening from CIS and OWASP recommendations
 
-🎓 Learning Outcomes
-Linux system administration basics
+Lock down remote access
 
-Automating security tasks with bash
+Minimize attack surface
 
-Firewall configuration using UFW
+Log all critical actions for review
 
-SSH security practices
+📌 Notes
+Tested on fresh Ubuntu 22.04 VM
 
-Using Fail2Ban for intrusion prevention
+Run the script only once per system unless otherwise modified
 
-👨‍💻 Author
-Jayanth
+Ideal for learning Linux hardening automation
+
+📈 Future Improvements
+Add support for CentOS/Debian systems
+
+Schedule cron job for periodic log audits
+
+Integrate email alerts for critical events
+
+Add rollback/restore support
+
+🙏 Credits
+CIS Benchmarks
+
+OWASP Linux Hardening
+
+Ubuntu Community Wiki
+
+InfoSec Forums & Hardening Guides
+
