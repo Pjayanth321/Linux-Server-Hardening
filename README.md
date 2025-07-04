@@ -56,18 +56,18 @@ The script applies real-world best practices used in system hardening and logs a
 ## 📸 Screenshots
 
 🔹 **1. Script Execution (Automation Running)**  
-<img src="screenshots/script_run.png" width="700"/>
+<img src="Screenshots/script_run.png" width="700"/>
 
 🔹 **2. SSH Configuration Hardened**  
-<img src="screenshots/sshd_config.png" width="700"/>
+<img src="Screenshots/sshd_config.png" width="700"/>
 
 🔹 **3. UFW Firewall Enabled and Active**  
-<img src="screenshots/ufw_status.png" width="700"/>
+<img src="Screenshots/ufw_status.png" width="700"/>
 
 🔹 **4. Fail2Ban Service Active for SSH Brute-Force Protection**  
-<img src="screenshots/fail2banstatus.png" width="700"/>
+<img src="Screenshots/fail2banstatus.png" width="700"/>
 
-> More screenshots are available in the [`/screenshots/`](screenshots/) folder.
+> More screenshots are available in the [`/Screenshots/`](Screenshots/) folder.
 
 ---
 
